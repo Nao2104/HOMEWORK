@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!-- FORMULARIO CARNETIZACIÓN -->
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-secundary bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">WORKER ID SYSTEM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#">EMPLOYEES</a>
+              <a class="nav-link" href="#">REGISTRATION</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+<section>
+    <div class="formularios">
+
+        <div class="mt-5 d-flex justify-content-center w-100">
+            <div class="w-50 border p-4 rounded shadow">
+   
+                <h2 class="text-center mb-4">WORKER ID</h2>
+            
+                <div class="mb-3">
+                    <label for="iname" class="form-label">Fullname</label>
+                    <input type="text" class="form-control" id="iname" placeholder="Type your Fullname">
+                </div>
+   
+                <div class="mb-3">
+                    <label for="Sourcename" class="form-label">Lastnames</label>
+                    <input type="text" class="form-control"  id="Lastnames" placeholder="Type your Lastnames">
+                </div>
+   
+                <div class="mb-3">
+                    <label for="Idnumber" class="form-label">IdNumber</label>
+                    <input type="number" class="form-control"  id="Idnumber" placeholder="Type you Idnumber, please enter only numbers">
+                </div>
+   
+   
+                <div class="mb-3 w-25">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control"  id="Age" placeholder="Type you age">
+                </div>
+   
+                <div class="mb-3">
+                    <label for="Position" class="form-label">Position</label>
+                    <input type="text" class="form-control"  id="Position" placeholder="Type your Position">
+                </div>
+   
+                <div class="mb-3">
+                    <label for="Rh" class="form-label">Rh</label>
+                    <input type="text" class="form-control"  id="Rh" placeholder="Type your Rh">
+                </div>
+   
+                <div class="mb-3">
+                    <label for="Telephone" class="form-label">Telephone</label>
+                    <input type="number" class="form-control"  id="Telephone" placeholder="Telephone">
+                </div>
+                            
+                <div class="btn d-flex justify-content-center"><a class= "btn btn-warning btn-sm w-50" href="#" onclick="Print()">PRINT</a></div>
+        </div>
+                </div>
+
+   
+<!-- Calculadora -->
+
+<h1>CALCULATOR</h1>
+
+
+<div class="calcular ">
+   <form name="calculator">
+
+       <input class="textfield" name="ans" value=" " autocomplete= "off" readonly>
+       <p>
+       <input class= "button" value="7" onclick="document.calculator.ans.value+='7'">
+       <input class= "button" value="8" onclick="document.calculator.ans.value+='8'">
+       <input class= "button" value="9" onclick="document.calculator.ans.value+='9'">
+       <input class= "button" value="+" onclick="document.calculator.ans.value+='+'">
+       </p>
+       <p>
+       <input class= "button" value="4" onclick="document.calculator.ans.value+='4'">
+       <input class= "button" value="5" onclick="document.calculator.ans.value+='5'">
+       <input class= "button" value="6" onclick="document.calculator.ans.value+='6'">
+       <input class= "button" value="." onclick="document.calculator.ans.value+='.'">
+       </p>
+       <p>
+       <input class= "button" value="1" onclick="document.calculator.ans.value+='1'">
+       <input class= "button" value="2" onclick="document.calculator.ans.value+='2'">
+       <input class= "button" value="3" onclick="document.calculator.ans.value+='3'">
+       <input class= "button" value="X" onclick="document.calculator.ans.value+='*'"> 
+       </p>
+       <p>
+       <input class= "button" value="0" onclick="document.calculator.ans.value+='0'">
+       <input type= "reset" value="C" class="reset">
+       <input class= "button" value="=" onclick="document.calculator.ans.value= eval(document.calculator.ans.value)">
+       <input class= "button" value="/" onclick="document.calculator.ans.value+='/'">
+       </p>
+   </form>
+
+</div>
+
+
+
+<!--OTRO FORMULARIO-->
+
+<section>
+   <div class="mt-5 d-flex justify-content-center w-100">
+       <div class="w-50 border p-4 rounded shadow">
+
+           <h2 class="text-center mb-4">PERSONAL INFORMATION</h2>
+           <h5 class="text-center mb-4"> Press the button in each category, Type your information, then press print to get your worker id.</h5>
+
+           <div class="mb-3 width 40%">
+               <label for="name" class="form-label">NAME</label>
+               <button onclick="sayMeYourName()">Select to Enter your name.</button>
+           </div>
+
+           <div class="mb-3">
+               <label for="lastname" class="form-label">LAST NAME</label>
+               <button onclick="sayMeYourLastname()">Select to Enter your lastname</button>
+           </div>
+
+           <div class="mb-3">
+               <label for="age" class="form-label">AGE</label>
+               <button onclick="sayMeYourAge()">Select to Enter your age</button>
+           </div>
+
+           
+           <div class="mb-3">
+               <label for="Position in the company" class="form-label">POSITION IN THE COMPANY</label>
+               <button onclick="sayMeYourPosition()">Select to Enter your position in the Company</button>
+           </div>
+
+           
+           <div class="mb-3">
+               <label for="RH" class="form-label">RH</label>
+               <button onclick="sayMeYourRh()">Select and type your RH</button>
+           </div>
+
+           
+           <div class="mb-3">
+               <label for="ID NUMBER" class="form-label">ID NUMBER</label>
+               <button onclick="sayMeYourIdnumber()">Select and type your Id number</button>
+           </div>
+
+           
+           <div class="mb-3">
+               <label for="TELEPHONE NUMBER" class="form-label">TELEPHONE</label>
+               <button onclick="sayMeYourTelephone()">Select and type your phone number</button>
+           </div>
+
+           <button onclick="Print()">PRINT</button>
+
+       </div>
+   </div>
+
+</section>
+
+    </div>
+        
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
